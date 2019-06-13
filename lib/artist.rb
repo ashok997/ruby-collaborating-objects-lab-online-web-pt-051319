@@ -32,4 +32,8 @@ class Artist
   def self.find_by_name(name)
     self.all.detect {|artist| artist.name == name}
   end
+  
+  def print_songs
+    @songs.map {|song| puts song.name}  
+  end
 end
