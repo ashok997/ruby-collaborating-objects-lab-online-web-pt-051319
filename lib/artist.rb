@@ -27,6 +27,7 @@ class Artist
   
   def self.create_by_name(name)
     self.new(name).tap(&:save)
+  end
   
   def self.find_by_name(name)
     self.all.detect {|artist| artist.name == name}
